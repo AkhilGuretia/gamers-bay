@@ -16,7 +16,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
 
     return (
         <>
-            <Heading fontSize="2xl" marginBottom={3}>Genres</Heading>
+            <Heading fontSize="2xl" marginTop={9} marginBottom={3}>Genres</Heading>
             <List>
                 {data.map(genre => (
                     <ListItem key={genre.id} paddingY="10px">
@@ -29,7 +29,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
                             />
                             <Button whiteSpace="normal" textAlign="left" onClick={() => onSelectGenre(genre)}
                                 fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
-                                variant="link" fontSize="lg" >
+                                variant="link" fontSize="md" >
                                 {genre.name}
                             </Button>
                         </HStack>
